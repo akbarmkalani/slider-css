@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Playfair+Display:wght@900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.wraper{
+    width: 100%;
+    height:100vh;
+}
+.wraper>.slid{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.wraper>.slid>figure{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.wraper>.slid>figure>img{
+  width: 100%;
+  height: 100%;
+}
+.wraper>.slid>figure:nth-of-type(1){
+    animation-name: s1;
+}
+.wraper>.slid>figure:nth-of-type(2){
+    animation-name: s2;
+}
+.wraper>.slid>figure:nth-of-type(3){
+    animation-name: s3;
+}
+.wraper>.slid>figure:nth-of-type(4){
+    animation-name: s4;
+}
+.wraper>.slid>figure:nth-of-type(5){
+    animation-name: s5;
+}
+.wraper>.slid>figure>figcaption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     font-weight: bold;
+      text-transform: uppercase;
+      font-size: 10rem;
+      background: linear-gradient(45deg, red, blue, red, #fa04fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 40px;
+      font-family: 'Libre Baskerville', serif;
+      
+    /* font-family: 'Playfair Display', serif; */
+       animation:  textfi 4s linear infinite;
+}
+
+
+.wraper>.slid>figure::before{
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(79, 2, 2, 0.329), rgba(19, 19, 57, 0.394) , rgba(40, 13, 91, 0.373));
+}
+
+/* s1 S */
+@keyframes s1{
+    0%,  18%, 100%{
+        left:0; 
+    }
+    22%{
+        left: 100%;
+    }
+    22.00000001%, 97%{
+        left: -100%;
+    }
+    
+    
+
+}
+/* s1 end */
+/* s2 S */
+@keyframes s2{
+    0%,  18%{
+        left: -100%;
+    }
+    22%,  38%{
+        left: 0;
+    }
+    42%{
+        left: 100%;
+    }
+    42.0000001%,  100%{
+        left: -100%;
+    }
+  
+}
+/* s2 end */
+
+/* s3 s */
+@keyframes s3{
+     0%, 38%{
+        left: -100%;
+     }
+   
+     42%,58%{
+        left: 0;
+     }
+   
+     62%{
+        left: 100%;
+     }
+     62.000000001%, 100%{
+        left: -100%;
+     }
+     
+}
+/* s3 end  */
+ /* s4 s */
+
+ @keyframes s4{
+    0%,  58%{
+        left: -100%;
+    }
+   
+    62%,  78%{
+       left: 0;
+    }
+  
+    82%{
+        left:100%;
+    }
+    82.0000001%, 100%{
+        left:-100%;
+    }   
+ }
+
+ /* s4 end */
+
+ /* s5 S */
+
+ @keyframes s5{
+    0%,  78%{
+        left: -100%;
+    }
+    82%, 97%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+ }
+
+/* figcaption  */
+@keyframes textfi {
+    0%{
+        transform:translate(-50%, -50%) scale(0);
+    }
+    15%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+  
+    80%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+90%{
+        transform:translate(-50%, -50%) scale(0);
+    }
+    100%{
+        transform:translate(-50%, -50%) scale(0);
+    }
+}
